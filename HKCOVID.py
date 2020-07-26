@@ -15,7 +15,7 @@ s='Subject: HK COVID UPDATE\n\n' + new
 conn = smtplib.SMTP('smtp.gmail.com', 587) 
 conn.ehlo()
 conn.starttls() # starts tls encryption so the password will be encrypted.
-conn.login('iqra.abbasi840@gmail.com', 'bonamana')
+conn.login(from_address, from_password )
 conn.sendmail('fromemail', 'toemail', s)
 conn.quit()
 print('Sent email to fromemail\n')
